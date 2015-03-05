@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkbook", "Checkbook.csproj", "{5C5981B4-2E93-4C40-B8E4-6F3780200B3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckbookWeb", "..\CheckbookWeb\CheckbookWeb.csproj", "{24D47A51-33D5-49B3-907E-7EE58E4FBCC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C5981B4-2E93-4C40-B8E4-6F3780200B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C5981B4-2E93-4C40-B8E4-6F3780200B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C5981B4-2E93-4C40-B8E4-6F3780200B3A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5C5981B4-2E93-4C40-B8E4-6F3780200B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C5981B4-2E93-4C40-B8E4-6F3780200B3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C5981B4-2E93-4C40-B8E4-6F3780200B3A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{24D47A51-33D5-49B3-907E-7EE58E4FBCC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D47A51-33D5-49B3-907E-7EE58E4FBCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D47A51-33D5-49B3-907E-7EE58E4FBCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D47A51-33D5-49B3-907E-7EE58E4FBCC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
