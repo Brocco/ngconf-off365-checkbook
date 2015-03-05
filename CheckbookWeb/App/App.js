@@ -5,13 +5,13 @@
 
     angular.module('checkbook', [
         'ngMaterial',
+        'ngAnimate',
+        'ngAria',
         'checkbook-add',
         'checkbook-bank'
     ]);
 
-    Office.initialize = function (reason) {
-        $(document).ready(function () {
-            angular.bootstrap($('#app-container', ['checkbook']));
-        });
+    Office.initialize = function () {
+        angular.bootstrap($('#app-container'), ['checkbook']);
     };
 })();

@@ -2,14 +2,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-    <script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js" type="text/javascript"></script>
 
-    <script src="../Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="../Scripts/angular.min.js" type="text/javascript"></script>
-    <script src="../Scripts/angular-material.min.js"></script>
-    <link href="../Content/angular-material/angular-material.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="/Scripts/angular.js" type="text/javascript"></script>
+    <script src="/Scripts/angular-material.js"></script>
+    <script src="/Scripts/angular-animate.js"></script>
+    <script src="/Scripts/angular-aria.js"></script>
+    <link href="/Content/angular-material/angular-material.css" rel="stylesheet" />
+
+    <script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js" type="text/javascript"></script>
 </head>
 <body id="app-container">
-    <h1>hi mom</h1>
+    <md-tabs>
+        <md-tab label="Add Transaction(s)">
+            <div ng-controller="addCtrl as addCtrl">
+                <md-input-container>
+                    <label>Date</label>
+                    <input type="text" ng-model="addCtrl.date" require>
+                </md-input-container>
+                <md-input-container>
+                    <label>Description</label>
+                    <input type="text" ng-model="addCtrl.description" require>
+                </md-input-container>
+                <md-input-container>
+                    <label>Amount</label>
+                    <input type="text" ng-model="addCtrl.amount" require>
+                </md-input-container>
+                <md-select ng-model="addCtrl.Type" placeholder="Select a type">
+                    <md-option ng-value="opt" ng-repeat="opt in addCtrl.types">{{ opt }}</md-option>
+                </md-select>
+                <br />
+                <md-button md-ripple-size="full" ng-click="addCtrl.addTrans()">Add</md-button>
+            </div>
+        </md-tab>
+        <md-tab label="Reconcile">
+            <div ng-controller="bankCtrl as bankCtrl">
+                <md-input-container>
+                    <label>Enter an amount to search upon</label>
+                    <input type="text" ng-model="bankCtrl.searchAmt" require>
+                </md-input-container>
+                <md-button ng-click="bankCtrl.search()">Search</md-button>
+                <div ng-show="bankCtrl.showSearchResults">
+                    <h2>Searched for: {{searchedOn}}</h2>
+                    <ul>
+                        <li ng-repeat="result in bankCtrl.results">
+                            {{result.date}} - {{result.desc}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </md-tab>
+    </md-tabs>
+
+    <script src="add.js"></script>
+    <script src="bank.js"></script>
+    <script src="App.js"></script>
 </body>
 </html>
