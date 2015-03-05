@@ -1,33 +1,17 @@
 ﻿/* Common app functionality */
 
-var app = (function () {
+(function () {
     "use strict";
 
-    var app = {};
+    angular.module('checkbook', [
+        'ngMaterial',
+        'checkbook-add',
+        'checkbook-bank'
+    ]);
 
-    // Common initialization function (to be called from each page)
-    app.initialize = function () {
-        $('body').append(
-            '<div id="notification-message">' +
-                '<div class="padding">' +
-                    '<div id="notification-message-close"></div>' +
-                    '<div id="notification-message-header"></div>' +
-                    '<div id="notification-message-body"></div>' +
-                '</div>' +
-            '</div>');
-
-        $('#notification-message-close').click(function () {
-            $('#notification-message').hide();
+    Office.initialize = function (reason) {
+        $(document).ready(function () {
+            angular.bootstrap($('#app-container', ['checkbook']));
         });
-
-
-        // After initialization, expose a common notification function
-        app.showNotification = function (header, text) {
-            $('#notification-message-header').text(header);
-            $('#notification-message-body').text(text);
-            $('#notification-message').slideDown('fast');
-        };
     };
-
-    return app;
 })();
