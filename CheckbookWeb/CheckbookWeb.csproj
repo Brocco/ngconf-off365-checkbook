@@ -66,9 +66,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\add.html" />
     <Content Include="App\add.js" />
     <Content Include="App\App.css" />
     <Content Include="App\App.js" />
+    <Content Include="App\bank.html" />
+    <Content Include="App\bank.js" />
     <Content Include="App\Home\Home.css" />
     <Content Include="App\Home\Home.html" />
     <Content Include="App\Home\Home.js" />
@@ -368,7 +371,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>32515</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:32515/</IISUrl>
+          <IISUrl>http://localhost:8443/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

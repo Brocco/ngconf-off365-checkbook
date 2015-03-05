@@ -1,9 +1,11 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+﻿<md-input-container>
+    <label>Date</label>
+    <input type="text" ng-model="appCtrl.date" require>
+</md-input-container>
+<md-input-container>
+    <label>Description</label>
+    <input type="text" ng-model="appCtrl.description" require>
+</md-input-container>
+<md-select ng-model="appCtrl.Type" placeholder="Select a type">
+    <md-option ng-value="opt" ng-repeat="opt in appCtrl.types">{{ opt }}</md-option>
+</md-select>
